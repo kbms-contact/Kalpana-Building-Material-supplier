@@ -56,9 +56,9 @@
   <style>
     :root{--bg-1:#071019;--accent:#cfa24b;--muted:#9aa5b1;--glass:rgba(255,255,255,0.05);--card:rgba(255,255,255,0.03);--radius:14px}
     *{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,var(--bg-1),#041018 75%);color:#e6eef6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.45;overflow-x:hidden}
-    .wrap{max-width:1200px;margin:0 auto;padding:36px}header{padding:18px 0}.nav{display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit}.logo{width:64px;height:64px;display:inline-grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,#2b1c12,#2d1f12);overflow:hidden}.logo img{width:52px;height:auto;display:block}.brand-text b{font-family:'Playfair Display',serif;font-weight:700;font-size:18px;color:var(--accent)}.brand-text span{font-size:12px;color:var(--muted)}nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}.cta{background:linear-gradient(90deg,var(--accent),#e2b85b);color:#121217;padding:10px 18px;border-radius:12px;font-weight:700;text-decoration:none}
+    .wrap{max-width:1200px;margin:0 auto;padding:36px}header{padding:18px 0}.nav{display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit}.logo{width:120px;height:120px;display:inline-grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,#2b1c12,#2d1f12);overflow:hidden}.logo img{width:52px;height:auto;display:block}.brand-text b{font-family:'Playfair Display',serif;font-weight:700;font-size:18px;color:var(--accent)}.brand-text span{font-size:12px;color:var(--muted)}nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}.cta{background:linear-gradient(90deg,var(--accent),#e2b85b);color:#121217;padding:10px 18px;border-radius:12px;font-weight:700;text-decoration:none}
 
-    .hero{display:grid;grid-template-columns:1fr 520px;gap:40px;align-items:center;padding:48px 0 80px}.eyebrow{display:inline-block;background:var(--glass);padding:6px 12px;border-radius:999px;color:var(--muted);font-weight:600;margin-bottom:18px}h1{font-family:'Playfair Display',serif;font-size:54px;margin:0 0 18px;font-weight:700;color:#fff}p.lead{color:#c5d0db;margin:0 0 24px;font-size:17px}.chip{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:10px 12px;border-radius:12px;font-weight:600;color:var(--muted);backdrop-filter: blur(4px)}
+    .hero{display:grid;grid-template-columns:1fr 520px;gap:40px;align-items:center;padding:48px 0 80px}.eyebrow{display:inline-block;background:var(--glass);padding:6px 12px;border-radius:999px;color:var(--muted);font-weight:600;margin-bottom:18px}h1{font-family:'Playfair Display',serif;font-size:72px;margin:0 0 18px;font-weight:900;color:#fff}p.lead{color:#c5d0db;margin:0 0 24px;font-size:17px}.chip{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:10px 12px;border-radius:12px;font-weight:600;color:var(--muted);backdrop-filter: blur(4px)}
 
     .hero-card{border-radius:18px;overflow:hidden;position:relative;box-shadow:0 30px 60px rgba(3,8,15,0.6);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}.hero-card .media{width:100%;height:360px;background-size:cover;background-position:center}.hero-bg{background-image:linear-gradient(180deg,rgba(6,8,10,0.18),rgba(4,6,8,0.45)), url('background 1.png')}.hero-card .meta{padding:18px}
 
@@ -111,7 +111,7 @@
     <main>
       <section class="hero">
         <div>
-          <span class="eyebrow">Trusted since 20XX • Serving Ajmer & Rajasthan</span>
+          <span class="eyebrow">Trusted since 2017 • Serving Ajmer & Rajasthan</span>
           <h1>Premium building materials — delivered on time, every time</h1>
           <p class="lead">Kalpana Building Material Suppliers (KBMS) supplies quality bricks, steel, timber and roofing to residential and commercial projects across Ajmer and surrounding areas.</p>
           <div style="margin-top:22px"><a class="btn-primary" href="#contact" onclick="trackLead();">Get a free estimate</a> <a href="#calculator" style="margin-left:12px;color:var(--muted);font-weight:700;text-decoration:none">Bricks calculator →</a></div>
@@ -144,84 +144,10 @@
       </section>
 
       <!-- BRICK CALCULATOR -->
-      <section id="calculator" class="section">
-        <div class="wrap">
-          <h2>Bricks & Blocks Calculator</h2>
-          <p class="muted">Quickly estimate how many bricks you need and the approximate material cost. Adjust sizes and wastage as needed.</p>
-
-          <div class="calculator">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-              <div>
-                <label>Wall length (meters)</label>
-                <input id="length" type="number" step="0.01" placeholder="e.g. 10" />
-              </div>
-              <div>
-                <label>Wall height (meters)</label>
-                <input id="height" type="number" step="0.01" placeholder="e.g. 3" />
-              </div>
-              <div>
-                <label>Brick length (mm)</label>
-                <input id="brickL" type="number" value="190" />
-              </div>
-              <div>
-                <label>Brick height (mm)</label>
-                <input id="brickH" type="number" value="90" />
-              </div>
-              <div>
-                <label>Mortar gap (mm)</label>
-                <input id="gap" type="number" value="10" />
-              </div>
-              <div>
-                <label>Wastage (%)</label>
-                <input id="wastage" type="number" value="8" />
-              </div>
-              <div>
-                <label>Price per brick (₹)</label>
-                <input id="pricePer" type="number" value="6" />
-              </div>
-              <div>
-                <label>&nbsp;</label>
-                <div style="display:flex;gap:8px">
-                  <button class="btn-primary" onclick="calculateBricks()">Calculate</button>
-                  <button class="btn-primary" onclick="resetCalculator()" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">Reset</button>
-                </div>
-              </div>
-            </div>
-
-            <div style="margin-top:18px;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px">
-              <div><strong>Estimated bricks needed:</strong> <span id="resultCount">—</span></div>
-              <div style="margin-top:8px"><strong>Estimated cost:</strong> ₹<span id="resultCost">—</span></div>
-              <div style="margin-top:8px;color:var(--muted)">Tip: For double-skin or bonded walls, multiply the result accordingly.</div>
-              <div style="margin-top:12px"><a class="btn-primary" href="#contact" onclick="trackLead();">Request a quote with these specs</a></div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <!-- PACKAGES / FUNNEL -->
-      <section id="packages" class="section">
-        <div class="wrap">
-          <h2>Ready-made material packs (High-conversion landing offers)</h2>
-          <p class="muted">Choose a package and get an instant quote via WhatsApp or our contact form.</p>
-          <div class="grid" style="margin-top:18px">
-            <div class="card">
-              <h3>Starter House Pack</h3>
-              <p>Bricks, cement, sand and basic reinforcement for a 500 sq.ft home — ideal for small projects.</p>
-              <div style="margin-top:12px"><a class="btn-primary" href="#" onclick="startFunnel('Starter House Pack')">Order this pack</a></div>
-            </div>
-            <div class="card">
-              <h3>Boundary Wall Pack</h3>
-              <p>Everything for a 100m boundary wall — bricks, mortar, and aggregates included.</p>
-              <div style="margin-top:12px"><a class="btn-primary" href="#" onclick="startFunnel('Boundary Wall Pack')">Order this pack</a></div>
-            </div>
-            <div class="card">
-              <h3>Contractor Bulk Pack</h3>
-              <p>Bulk pricing for builders — available for delivery across Ajmer & Rajasthan. Contact for custom quote.</p>
-              <div style="margin-top:12px"><a class="btn-primary" href="#" onclick="startFunnel('Contractor Bulk Pack')">Get bulk quote</a></div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <!-- HIGH-CONVERSION LANDING SECTION (template) -->
       <section id="landing" class="section">
@@ -248,9 +174,9 @@
               <h4>Why KBMS?</h4>
               <ul class="muted">
                 <li>Local deliveries in Ajmer within 24–48 hours</li>
-                <li>Bulk discounts for contractors</li>
+                
                 <li>Quality-checked materials</li>
-                <li>Trusted since 20XX</li>
+                <li>Trusted since 2017</li>
               </ul>
               <div style="margin-top:12px"><strong>Trust badges</strong>
                 <div style="display:flex;gap:8px;margin-top:8px"><img src="badge1.png" alt="trusted" style="height:36px"><img src="badge2.png" alt="quality" style="height:36px"></div>
@@ -261,9 +187,7 @@
       </section>
 
       <!-- TESTIMONIALS -->
-      <section id="testimonials" class="section">
-        <div class="wrap"><h2>Trusted by builders & contractors</h2><div class="testimonials" style="margin-top:12px"><div class="testimonial"><strong>Rohit Builders</strong><p class="muted">"KBMS delivered on time and materials were top quality. Saved our schedule."</p></div><div class="testimonial"><strong>Sharma Constructions</strong><p class="muted">"Great bulk rates and fast delivery across Ajmer."</p></div><div class="testimonial"><strong>Priya Homeowner</strong><p class="muted">"Helpful staff and good pricing — recommended."</p></div></div></div>
-      </section>
+      
 
       <section id="about" class="section">
         <div class="wrap"><h2>About KBMS</h2><p class="muted">Family-run, project-focused. We combine decades of local market knowledge with a modern logistics setup so your materials arrive when you need them.</p></div>
@@ -323,25 +247,28 @@
 
     // Bricks calculator
     function calculateBricks(){
-      const L=parseFloat(document.getElementById('length').value)||0;
-      const H=parseFloat(document.getElementById('height').value)||0;
-      const brickL=parseFloat(document.getElementById('brickL').value)||190;
-      const brickH=parseFloat(document.getElementById('brickH').value)||90;
-      const gap=parseFloat(document.getElementById('gap').value)||10;
-      const wastage=parseFloat(document.getElementById('wastage').value)||8;
-      const pricePer=parseFloat(document.getElementById('pricePer').value)||6;
-      if(L<=0||H<=0){alert('Please enter valid wall length and height');return}
-      // convert mm to meters for brick including gap
-      const brickWidthM = (brickL + gap)/1000;
-      const brickHeightM = (brickH + gap)/1000;
+      // Permanent brick dimensions (mm)
+      const BRICK_L = 228.6; // 9 in
+      const BRICK_W = 101.6; // 4 in (not used for area-based calc)
+      const BRICK_H = 76.2;  // 3 in
+      const L = parseFloat(document.getElementById('length').value) || 0;
+      const H = parseFloat(document.getElementById('height').value) || 0;
+      const gap = parseFloat(document.getElementById('gap').value) || 10;
+      const wastage = parseFloat(document.getElementById('wastage').value) || 8;
+      const pricePer = parseFloat(document.getElementById('pricePer').value) || 6;
+      if(L <= 0 || H <= 0){ alert('Please enter valid wall length and height'); return; }
+      // include mortar gap into effective brick dimensions
+      const brickWidthM = (BRICK_L + gap) / 1000; // length in meters
+      const brickHeightM = (BRICK_H + gap) / 1000; // height in meters
       const bricksPerSqM = 1 / (brickWidthM * brickHeightM);
       const area = L * H;
-      let count = Math.ceil(bricksPerSqM * area * (1 + wastage/100));
+      const count = Math.ceil(bricksPerSqM * area * (1 + wastage/100));
       const cost = Math.round(count * pricePer);
       document.getElementById('resultCount').innerText = count.toLocaleString();
       document.getElementById('resultCost').innerText = cost.toLocaleString();
     }
-    function resetCalculator(){document.getElementById('length').value='';document.getElementById('height').value='';document.getElementById('resultCount').innerText='—';document.getElementById('resultCost').innerText='—'}
+
+    function resetCalculator()(){document.getElementById('length').value='';document.getElementById('height').value='';document.getElementById('resultCount').innerText='—';document.getElementById('resultCost').innerText='—'}
 
     // Lead magnet popup (collects email via Formspree endpoint) -- set your form endpoint
     const LEAD_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
